@@ -3,6 +3,9 @@ kind: Deployment
 metadata:
   name: backend
   namespace: 3-tier-ns
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/hook: PostSync
   labels:
     app: backend
 spec:
