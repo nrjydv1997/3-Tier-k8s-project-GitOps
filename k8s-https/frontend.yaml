@@ -5,6 +5,9 @@ metadata:
   namespace: 3-tier-ns
   labels:
     app: frontend
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+    argocd.argoproj.io/hook: PostSync
 spec:
   replicas: 2
   selector:
